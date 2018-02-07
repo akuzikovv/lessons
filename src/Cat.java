@@ -1,6 +1,6 @@
 public class Cat {iooiuoiuo
      private String name;
-jjj
+                  
     public void meow(){
         System.out.println( name + " mrr");
     }
