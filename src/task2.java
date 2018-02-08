@@ -25,8 +25,8 @@ public class task2 extends Menu{
     public static void menu() {
         System.out.println("Посчитать еще раз? (Введите '1' если да, '2' чтобы завершить)");
         int v = Integer.parseInt(input.nextLine());
-        if (v == 1) { vivod(); }
-        if (v == 2) { System.out.println("До встречи!");   }
+        if (v == 1)  vivod();
+        if (v == 2) Exit.main();
     }
 
 }

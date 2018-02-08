@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Demo {
-    public static void main(String[] args) {
+public class task3 extends Menu {
+    public static void main() {
 //        Cat cat = new Cat();
 //        cat.setName("Kot");
 //        cat.meow();
@@ -41,19 +41,19 @@ public class Demo {
 //        }
 
         ///////////////////// задача 2 
-
+        System.out.println("Введите первое число");
         Scanner in = new Scanner(System.in);
         int numb1 = in.nextInt();
-        System.out.println("введите второе число");
+        System.out.println("Введите второе число");
         int numb2 = in.nextInt();
         if (numb1==numb2){
-            System.out.println("numb1 = numb2");
+            System.out.println("Первое число = Второму числу");
         }
         if (numb1 > numb2){
-            System.out.println("numb1 > numb2");
+            System.out.println("Первое число > Второго числа");
         }
         else {
-            System.out.println("numb1 < numb2");
+            System.out.println("Первое число < Второго числа");
         }
 
     }

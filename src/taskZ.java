@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class taskZ {
+public class taskZ extends Menu {
     public static int i = 1;
 
-    public static void main(String[] args) {
+    public static void main() {
         // prog — число созданное программой
         // user — число введённое пользователем
 
@@ -44,7 +44,7 @@ public class taskZ {
         } else {
             System.out.println("Ошибка. Вы не ввели целое число!");
         }
-        System.out.println("До свиданья!");
+        Exit.main();
 
     }
 }

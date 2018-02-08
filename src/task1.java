@@ -11,7 +11,7 @@ public class task1 extends Menu {
         input = new Scanner(System.in);
         System.out.println("Введите число от 1 до 10. У Вас 3 попытки.");
         compareIfTrue();
-        exit();
+        Exit.main();
     }
 
     public static void compareIfTrue() {
@@ -36,8 +36,5 @@ public class task1 extends Menu {
         }
     }
 
-    public static void exit() {
-        System.out.println("До встречи!"+'\n');
-        menu();
-    }
+
 }
