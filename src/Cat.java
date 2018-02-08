@@ -1,4 +1,4 @@
-public class Cat {iooiuoiuo
+public class Cat {
      private String name;
                   
     public void meow(){
