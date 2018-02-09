@@ -11,7 +11,7 @@ public class task1 extends Menu {
         input = new Scanner(System.in);
         System.out.println("Введите число от 1 до 10. У Вас 3 попытки.");
         compareIfTrue();
-        Exit.main();
+        Menu.menu();
     }
 
     public static void compareIfTrue() {
@@ -21,7 +21,7 @@ public class task1 extends Menu {
         } else if (qty != 1) {
             compareIfValid();
         } // если еще есть попытки, то выполняем проверку
-        else System.out.println("Вы не угадали число. Верное число: " + random);
+        else System.out.println("Вы не угадали число. Верное число: " + random+'\n');
     }
 
     public static void compareIfValid() {

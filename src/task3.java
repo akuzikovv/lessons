@@ -47,14 +47,15 @@ public class task3 extends Menu {
         System.out.println("Введите второе число");
         int numb2 = in.nextInt();
         if (numb1==numb2){
-            System.out.println("Первое число = Второму числу");
+            System.out.println("Первое число = Второму числу"+'\n');
         }
         if (numb1 > numb2){
-            System.out.println("Первое число > Второго числа");
+            System.out.println("Первое число > Второго числа"+'\n');
         }
         else {
-            System.out.println("Первое число < Второго числа");
+            System.out.println("Первое число < Второго числа"+'\n');
         }
+        Menu.menu();
 
     }
 }
