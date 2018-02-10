@@ -36,7 +36,7 @@ public class task4 {
 //     for (int[] n :m)
      return true;
     }
-     public static int sumLine() {
+     public static boolean sumLine() {
          int sum = 0;
          int v = 0;
          int g = 0;
@@ -46,7 +46,11 @@ public class task4 {
                  v += m[i][j];
                  g += m[j][i];
              }
-         }return sum;
+             if (sum ==0){
+                 sum = v;
+             }
+             if (v!=g && v!=sum) return false;
+         }return true;
 
 
 //
