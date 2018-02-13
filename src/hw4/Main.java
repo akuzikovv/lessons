@@ -25,8 +25,9 @@ public class Main {
                 System.out.println("Задача 1: ");
                 Task1.main();
                 break;
-            case 2:  Task2.main();
+            case 2:
                 System.out.println("Задача 2 :");
+                Task2.main();
                 break;
             case 9:
                 System.out.println("До встречи!");
