@@ -10,8 +10,8 @@ public class Task3 extends Main {
     С помощью программы подсчитайте сколько счастливых билетов в одном рулоне?
     */
     public static int q, w, e, r, t, y;
-    public  static int sum0 = 0 ;
-    public static int mas[][][][][][] = new int[10][10][10][10][10][10];
+    public static int sum0 = 0;
+    public static int mas[] = new int[10];
 
     public static void main() {
         counting();
@@ -24,39 +24,34 @@ public class Task3 extends Main {
                     for (r = 0; r <= 9; r++) {
                         for (t = 0; t <= 9; t++) {
                             for (y = 0; y <= 9; y++) {
-                                mas[q][0][0][0][0][0] = q;
-                                mas[0][w][0][0][0][0] = w;
-                                mas[0][0][e][0][0][0] = e;
-                                mas[0][0][0][r][0][0] = r;
-                                mas[0][0][0][0][t][0] = t;
-                                mas[0][0][0][0][0][y] = y;
-                                int sum1 = mas[q][0][0][0][0][0]+mas[0][w][0][0][0][0]+mas[0][0][e][0][0][0];
-                                int sum2 = mas[0][0][0][r][0][0]+mas[0][0][0][0][t][0]+mas[0][0][0][0][0][y];
-                                if (sum1==sum2) {
+                                mas[q] = q;
+                                mas[w] = w;
+                                mas[e] = e;
+                                mas[r] = r;
+                                mas[t] = t;
+                                mas[y] = y;
+                                int sum1 = mas[q] + mas[w] + mas[e];
+                                int sum2 = mas[r] + mas[t] + mas[y];
+                                if (sum1 == sum2) {
                                     sum0++;
                                 }
-                                    /////////////////////  ВЫВОД БИЛЕТОВ В КОНСОЛЬ //////////////////////
-//                                System.out.print(mas[0][0][0][r][0][0]);
-//                                System.out.print(mas[0][0][0][0][t][0]);
-//                                System.out.print(mas[0][0][0][0][0][y]);
+                                /////////////////////  ВЫВОД БИЛЕТОВ В КОНСОЛЬ //////////////////////
+//                                System.out.print(mas[r]);
+//                                System.out.print(mas[t]);
+//                                System.out.print(mas[y]);
 //                                System.out.println("");
-//                                System.out.print(mas[q][0][0][0][0][0]);
-//                                System.out.print(mas[0][w][0][0][0][0]);
-//                                System.out.print(mas[0][0][e][0][0][0]);
-
+//                                System.out.print(mas[q]);
+//                                System.out.print(mas[w]);
+//                                System.out.print(mas[e]);
                             }
                         }
                     }
                 }
             }
         }
-        System.out.println( sum0 + " счастливых билетов.");
+        System.out.println(sum0 + " счастливых билетов.");
     }
-
-
-
-
-    }
+}
 
 
 
