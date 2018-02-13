@@ -9,9 +9,10 @@ public class Main {
     }
 
     public static void menu(){
-        String n0 = "Выберите задание, которое хотите выполнить: "+ '\n';
+        System.out.println("");
+        String n0 = '\n'+"Выберите задание, которое хотите выполнить: "+ '\n';
         String n1 = "1- Задача 1"+ '\n';
-        String n2 = "2- Задача 2"+ '\n';
+        String n2 = "2- Задача 2 'Последовательность Фибоначчи'"+ '\n';
         String n3 = "3- Задача 3"+ '\n';
         String n4 = "4- Задача 4"+ '\n';
         String n5 = "5- Задача 5"+ '\n';
@@ -28,6 +29,10 @@ public class Main {
             case 2:
                 System.out.println("Задача 2 :");
                 Task2.main();
+                break;
+            case 3:
+                System.out.println("Задача 3 :");
+                Task3.main();
                 break;
             case 9:
                 System.out.println("До встречи!");

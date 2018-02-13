@@ -14,17 +14,18 @@ public class Task2 extends Main {
         int n1 = 0;
         int n2 = 1;
         sum(n1, n2);
+        Main.menu();
     }
 
     public static void sum(int n1, int n2) {
-        while (i != 11) {
+        while (i != 11) { //счетчик количества выводимых чисел
             if (n2 != 0) {
                 n3 = n1 + n2;
                 n1 = n2;
                 n2 = n3;
-                System.out.print(n3+",");
+                System.out.print(n3+","); //вывод в строку через запятую
                 i++;
-                sum(n1, n2);
+                sum(n1, n2);// рекурсия перезаписи входных значений
             }
         }
     }
