@@ -15,6 +15,7 @@ public class Task3 extends Main {
 
     public static void main() {
         counting();
+        Main.menu();
     }
 
     public static void counting() {
