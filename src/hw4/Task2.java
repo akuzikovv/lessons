@@ -1,5 +1,4 @@
 package hw4;
-
 public class Task2 extends Main {
     /*
     Выведите на экран первые 11 членов последовательности Фибоначчи.
@@ -11,6 +10,7 @@ public class Task2 extends Main {
     public static int i = 0;
 
     public static void main() {
+        System.out.println("Последовательность Фибоначчи: ");
         int n1 = 0;
         int n2 = 1;
         sum(n1, n2);
@@ -22,8 +22,7 @@ public class Task2 extends Main {
                 n3 = n1 + n2;
                 n1 = n2;
                 n2 = n3;
-                String line1 = Integer.toString(n3);
-                System.out.println(line1);
+                System.out.print(n3+",");
                 i++;
                 sum(n1, n2);
             }
