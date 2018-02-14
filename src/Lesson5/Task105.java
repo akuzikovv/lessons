@@ -14,16 +14,17 @@ public class Task105 {
 
     }
 
-    public static int processMatrix(int[][]matrix){
+    public static int[] processMatrix(int[][]matrix){
+int[]result = new int[2];
 
-        for (int i=0;i<matrix.length;i++){
+        for (int i=0;i<matrix.length -1;i++){
             for (int j=0;j<matrix.length;j++){
                 if (matrix[i][j]>0){
-                    counter++;
-                    sum +=matrix[i][j];
-                }return counter;
-                return sum;
+                    result[0]++;
+                    result[1] +=matrix[i][j];
+                }
             }
 
-    }return 0;
-    }}
+    }return result;
+    }
+}
