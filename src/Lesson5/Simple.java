@@ -2,26 +2,27 @@ package Lesson5;
 
 import java.util.Scanner;
 
-public class Prostoe_chislo {
+public class Simple {
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
         int x = input.nextInt();
-//        int second = input.nextInt();
         isSimple(x);
         System.out.println(isSimple(x));
     }
 
     public static boolean isSimple(int x){
-        if (x==2){
+        if (x==2 ||x==1){
             return true;
         }
-        for (int i=3;i<x;i+=2){
+        if (x%2==0){
+            return false;
+        }
+        for (int i=2;i<x;i++){
             if ((x%i==0) && (x != i)){
                 return false;
             }
         }
-            return true;
+        return true;
     }
-
 }
