@@ -34,6 +34,10 @@ public class Main {
                 System.out.println("Задача 3 :");
                 Task3.main();
                 break;
+            case 4:
+                System.out.println("Задача 4: ");
+                Task4.main();
+                break;
             case 9:
                 System.out.println("До встречи!");
                 break;
