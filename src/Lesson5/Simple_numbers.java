@@ -2,7 +2,7 @@ package Lesson5;
 
 import java.util.Scanner;
 
-public class Simple {
+public class Simple_numbers {
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
