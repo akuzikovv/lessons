@@ -1,9 +1,7 @@
 package Lesson5;
-import java.util.Scanner;
 
 public class Massiv_prostuh_chisel {
 
-    public static Scanner input = new Scanner(System.in);
     public static int mas[] = new int[100];
 
     public static void main(String[] args) {
@@ -21,14 +19,11 @@ public class Massiv_prostuh_chisel {
             for (int i = 0; i <= index; i++) {
                 if (currentValue % mas[i] == 0) {
                     ++currentValue;
-                    i=0;
-//                    continue;
+                    i=-1;
                 }
             }
             mas[++index] = currentValue++;
         }
         return mas;
     }
-
-
 }
