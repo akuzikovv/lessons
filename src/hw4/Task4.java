@@ -1,5 +1,4 @@
 package hw4;
-
 public class Task4 extends Main {
     /*
 Электронные часы показывают время в формате от 00:00 до 23:59.

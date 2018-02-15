@@ -38,6 +38,10 @@ public class Main {
                 System.out.println("Задача 4: ");
                 Task4.main();
                 break;
+            case 5:
+                System.out.println("Задача 5: ");
+                Task5.main();
+                break;
             case 9:
                 System.out.println("До встречи!");
                 break;
