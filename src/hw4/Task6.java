@@ -4,13 +4,15 @@ public class Task6 extends Main {
     /*Cоздать двумерный массив из 7 строк по 4 столбца в каждой из случайных целых чисел из отрезка [-5;5].
     Вывести массив на экран. Определить и вывести на экран индекс строки с наибольшим по модулю произведением элементов.
     Если таких строк несколько, то вывести индекс первой встретившейся из них.*/
-    public static int i, j, a, max;
+    public static int i, j, a, max, index;
+    public static int proizv = 1;
     public static int mas[][] = new int[7][4];
     public static int result[] = new int[mas.length];
 
     public static void main() {
         System.out.print("Массив случайных чисел от -5 до 5 : " + '\n');
         fillingMassiv();
+        displayMassiv();
         countingIndex();
         Main.menu();
     }
@@ -27,6 +29,9 @@ public class Task6 extends Main {
                 mas[i][j] = a;
             }
         }
+    }
+
+    public static void displayMassiv() {
         for (i = 0; i <= 6; i++) {
             for (j = 0; j <= 3; j++)
                 System.out.print(mas[i][j] + " ");
@@ -35,8 +40,6 @@ public class Task6 extends Main {
     }
 
     public static void countingIndex() {
-        int index = 0;
-        int proizv = 1;
         for (int i = 0; i <= 6; i++) {
             for (int j = 0; j <= 3; j++) {
                 proizv *= Math.abs(mas[i][j]);
@@ -52,8 +55,7 @@ public class Task6 extends Main {
                 index = i;
             }
         }
-        System.out.println();
-        System.out.println("Индекс строки с наибольшим по модулю произведением элементов: " + index);
+        System.out.println('\n' + "Индекс строки с наибольшим по модулю произведением элементов: " + index);
     }
 
 
