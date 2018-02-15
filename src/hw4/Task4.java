@@ -12,7 +12,7 @@ public class Task4 extends Main {
         Main.menu();
     }
 
-    private static void counting() {
+    public static void counting() {
         for (q = 0; q <= 23; q++) {
             for (w = 0; w == 0; w++) {
                 for (e = 0; e < 6; e++) {

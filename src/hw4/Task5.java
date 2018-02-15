@@ -17,7 +17,7 @@ public class Task5 extends Main {
         return random;
     }
 
-    private static void counting() {
+    public static void counting() {
         for (i = 0; i <= 7; i++) {
             for (j = 0; j <= 4; j++) {
                 a = generateRandom();
