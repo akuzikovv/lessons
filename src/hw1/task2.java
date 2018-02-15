@@ -1,3 +1,5 @@
+package hw1;
+
 import java.util.Scanner;
 //Home work 2 , Kuzikov A.
 public class task2 extends Menu{

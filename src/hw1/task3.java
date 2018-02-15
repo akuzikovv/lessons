@@ -1,14 +1,16 @@
+package hw1;
+
 import java.util.Scanner;
 
 public class task3 extends Menu {
     public static void main() {
-//        Cat cat = new Cat();
+//        hw1.Cat cat = new hw1.Cat();
 //        cat.setName("Kot");
 //        cat.meow();
 //
 //        System.out.println(cat.getName());
 //
-//        Cat testCat = new Cat();
+//        hw1.Cat testCat = new hw1.Cat();
 //        testCat.setName("Kot2");
 //
 //        System.out.println(cat.equals(testCat));

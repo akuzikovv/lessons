@@ -1,3 +1,5 @@
+package hw1;
+
 public class Cat {
      private String name;
                   
@@ -15,7 +17,7 @@ public class Cat {
 
     @Override
     public String toString() {
-        return "Cat{" +
+        return "hw1.Cat{" +
                 "name='" + name + '\'' +
                 '}';
     }
