@@ -15,8 +15,8 @@ public class Main {
         String n2 = "2- Задача 2 'Последовательность Фибоначчи'"+ '\n';
         String n3 = "3- Задача 3"+ '\n';
         String n4 = "4- Задача 4"+ '\n';
-        String n5 = "5- Задача 5"+ '\n';
-        String n6 = "6- Задача 6"+ '\n';
+        String n5 = "5- Задача 5 'Массив 8х5 с числами [10;99]'"+ '\n';
+        String n6 = "6- Задача 6 'Массив 7х4 с числами [-5;5]'"+ '\n';
         String nq = "9 - Выход.";
         System.out.println(n0 + n1 + n2 + n3 + n4 + n5 + n6 + nq);
         int i;
@@ -41,6 +41,10 @@ public class Main {
             case 5:
                 System.out.println("Задача 5: ");
                 Task5.main();
+                break;
+            case 6:
+                System.out.println("Задача 6: ");
+                Task6.main();
                 break;
             case 9:
                 System.out.println("До встречи!");
