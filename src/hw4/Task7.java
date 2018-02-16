@@ -44,34 +44,31 @@ public class Task7 extends Main {
                 for (j = 1; j <= 10; j++) {
                     int n1 = mas[i];
                     int n2 = mas[j];
+                    if (n2 == 0) {
+                        mas[a] = mas[i];
+                        System.out.print(mas[a] + ".");
+                        System.out.println();
+//                        for (a=0;a<=9;a++){
+//                            System.out.print(mas[a] + ",");
+//                        }
+                        return;
+                    }
                     if (mas[i] > mas[j]) {
                         mas[i] = n2;
                         mas[j] = n1;
                         mas[a] = mas[i];
                         mas[i] = n1;
                         System.out.print(mas[a] + ",");
+                        mas[a]=n2;
                         i++;
                     } else {
                         mas[a] = mas[i];
                         System.out.print(mas[a] + ",");
+                        mas[a]=n1;
                         mas[i] = n2;
                         i++;
                     }
-                    if (n2 == 0) {
-                        mas[a] = mas[i];
-                        System.out.print(mas[a] + ".");
-                        System.out.println();
-//                        for (i=0;i<=9;i++){
-//                        for (a=0;a<=9;a++)
-//                            mas[i]=mas[a];
-//                            System.out.print(mas[i] + ",");
-                        }
-
                     }
-                }
-
             }
-
-
-
+    }
 }
