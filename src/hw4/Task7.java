@@ -1,12 +1,12 @@
 package hw4;
 
 public class Task7 extends Main {
-    /*74. Сортировка обменами. Дана последовательность чисел а 1 , а 2 , ..., а n .
-    Требуется переставить числа в порядке возрастания. Для этого сравниваются два соседних числа аi  и a i+1 .
-    Если а i  больше а i+1 , то делается перестановка.
-    Так продолжается до тех пор, пока все элементы не станут расположены в порядке возрастания.
-    Составить алгоритм сортировки, подсчитывая при этом количество перестановок.*/
-    public static int n3, i, j, a, max, index;
+/*74. Сортировка обменами. Дана последовательность чисел а 1 , а 2 , ..., а n .
+Требуется переставить числа в порядке возрастания. Для этого сравниваются два соседних числа аi  и a i+1 .
+Если а i  больше а i+1 , то делается перестановка.
+Так продолжается до тех пор, пока все элементы не станут расположены в порядке возрастания.
+Составить алгоритм сортировки, подсчитывая при этом количество перестановок.*/
+    public static int n3,n4, i, j, a, max, index;
     public static int proizv = 1;
     public static int mas[] = new int[100];
     public static int result[] = new int[mas.length];
@@ -40,6 +40,7 @@ public class Task7 extends Main {
     }
 
     public static void zamena() {
+        n3=0;
                    for (i = 0; i <= 9; i++) {
                 for (j = 1; j <= 10; j++) {
                     int n1 = mas[i];
@@ -48,25 +49,27 @@ public class Task7 extends Main {
                         mas[a] = mas[i];
                         System.out.print(mas[a] + ".");
                         System.out.println();
-//                        for (a=0;a<=9;a++){
-//                            System.out.print(mas[a] + ",");
-//                        }
+                        for (n3=1;n3<=10;n3++){
+                            System.out.print(mas[n3] + ",");
+                        }
                         return;
                     }
                     if (mas[i] > mas[j]) {
                         mas[i] = n2;
                         mas[j] = n1;
                         mas[a] = mas[i];
-                        mas[i] = n1;
                         System.out.print(mas[a] + ",");
-                        mas[a]=n2;
+                        mas[n3]=mas[a];
+                        mas[i] = n1;
                         i++;
                     } else {
                         mas[a] = mas[i];
+                        n4=mas[a];
                         System.out.print(mas[a] + ",");
-                        mas[a]=n1;
+                        mas[n3]=n4;
                         mas[i] = n2;
                         i++;
+
                     }
                     }
             }
