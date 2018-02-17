@@ -40,14 +40,12 @@ public class Task7 extends Main {
     }
 
     public static void zamena() {
-        n3=0;
                    for (i = 0; i <= 9; i++) {
                 for (j = 1; j <= 10; j++) {
                     int n1 = mas[i];
                     int n2 = mas[j];
                     if (n2 == 0) {
-                        mas[a] = mas[i];
-                        System.out.print(mas[a] + ".");
+                        System.out.print(mas[i] + ".");
                         System.out.println();
                         for (n3=1;n3<=10;n3++){
                             System.out.print(mas[n3] + ",");
@@ -56,20 +54,13 @@ public class Task7 extends Main {
                     }
                     if (mas[i] > mas[j]) {
                         mas[i] = n2;
-                        mas[j] = n1;
-                        mas[a] = mas[i];
-                        System.out.print(mas[a] + ",");
-                        mas[n3]=mas[a];
+                        mas[j] = n1;                                                System.out.print(mas[i] + ",");
                         mas[i] = n1;
                         i++;
                     } else {
-                        mas[a] = mas[i];
-                        n4=mas[a];
-                        System.out.print(mas[a] + ",");
-                        mas[n3]=n4;
+                        System.out.print(mas[i] + ",");
                         mas[i] = n2;
                         i++;
-
                     }
                     }
             }
