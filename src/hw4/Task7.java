@@ -49,7 +49,7 @@ public class Task7 extends Main {
                     if (n2 == 0) {
 
                         System.out.print(mas[i] + ".");
-                        System.out.println();
+                        System.out.println("//////Вывод полученного массива:");
                         for (n3=0;n3<=9;n3++){
                             System.out.print(mas[n3] + ",");
                         }
