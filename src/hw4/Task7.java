@@ -40,7 +40,8 @@ public class Task7 extends Main {
     }
 
     public static void zamena() {
-        while (qty != 9) {
+        //Вопрос: как остановить не говнокодом,когда все числа уже отсортированы?
+        while (qty != 9) {///Остановка говнокодом
             n3 = 0;
             for (i = 0; i <= 9; i++) {
                 for (j = 1; j <= 10; j++) {
@@ -49,7 +50,7 @@ public class Task7 extends Main {
                     if (n2 == 0) {
                         System.out.print(mas[i] + "." + '\n');
                         fillingMassivAfterSorting();
-                        qty++;
+                        qty++;//для остановки
                         zamena();
                     }
                     if (mas[i] > mas[j]) {
