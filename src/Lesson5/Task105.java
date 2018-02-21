@@ -9,7 +9,7 @@ public class Task105 {
     public static int sum=0;
 
     public static void main(String[] args) {
-        int n = input.nextInt();
+//        int n = input.nextInt();
         processMatrix(matrix);
 
     }

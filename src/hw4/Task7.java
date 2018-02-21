@@ -6,8 +6,8 @@ public class Task7 extends Main {
 Если а i  больше а i+1 , то делается перестановка.
 Так продолжается до тех пор, пока все элементы не станут расположены в порядке возрастания.
 Составить алгоритм сортировки, подсчитывая при этом количество перестановок.*/
-    public static int n3,n4, i, j, a,qty, max, index;
-    public static int proizv = 1;
+    public static int n3,n4, i, j, a, max, index;
+    public static int qty = 0;
     public static int mas[] = new int[100];
     public static int result[] = new int[mas.length];
 
@@ -40,7 +40,7 @@ public class Task7 extends Main {
     }
 
     public static void zamena() {
-        for (qty=0;qty<=9;qty++){
+        while(qty!=10){
         n3=0;
         a=0;
                    for (i = 0; i <= 9; i++) {
@@ -49,15 +49,16 @@ public class Task7 extends Main {
                     int n2 = mas[j];
                     if (n2 == 0) {
                         System.out.print(mas[i] + "."+'\n');
-                        System.out.println("//////Вывод полученного массива:");
+//                        System.out.println("//////Вывод полученного массива:");
                         for (n3=0;n3<=9;n3++){
                             for (i = n3; i <= n3; i++) {
 //                            i=0;
-                                System.out.print(mas[n3] + ",");
+//                                System.out.print(mas[n3] + ",");
                                 mas[i] = mas[n3];
                             }
                         }
-                        System.out.println();
+//                        System.out.println();
+                        qty++;
                         zamena();
                     }
                     if (mas[i] > mas[j]) {
@@ -75,7 +76,7 @@ public class Task7 extends Main {
                         i++;
                         n3++;
                     }
-                    }qty++;
+                    }
             }
         }
     }
