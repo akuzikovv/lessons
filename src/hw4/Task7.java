@@ -1,5 +1,7 @@
 package hw4;
 
+import hw1.Exit;
+
 public class Task7 extends Main {
     /*74. Сортировка обменами. Дана последовательность чисел а 1 , а 2 , ..., а n .
     Требуется переставить числа в порядке возрастания. Для этого сравниваются два соседних числа аi  и a i+1 .
@@ -40,37 +42,42 @@ public class Task7 extends Main {
     }
 
     public static void zamena() {
-        //Вопрос: как остановить не говнокодом,когда все числа уже отсортированы?
-        while (qty != 9) {///Остановка говнокодом
             n3 = 0;
             for (i = 0; i <= 9; i++) {
                 for (j = 1; j <= 10; j++) {
-                    int n1 = mas[i];
-                    int n2 = mas[j];
-                    if (n2 == 0) {
+                    int num1 = mas[i];
+                    int num2 = mas[j];
+                    if (num2 == 0) {
+                        if (qty==9){
+                            System.out.print(mas[i] + "." + '\n');
+                            System.out.println("Stop" + '\n');
+                            Main.menu();
+                        }else {
                         System.out.print(mas[i] + "." + '\n');
                         fillingMassivAfterSorting();
-                        qty++;//для остановки
+                        qty=0;//для остановки
                         zamena();
-                    }
+                    }}
                     if (mas[i] > mas[j]) {
-                        mas[i] = n2;
-                        mas[j] = n1;
+                        mas[i] = num2;
+                        mas[j] = num1;
                         System.out.print(mas[i] + ",");
-                        mas[i] = n1;
-                        mas[n3] = n2;
+                        mas[i] = num1;
+                        mas[n3] = num2;
                         i++;
                         n3++;
+                        qty = 0;
+
                     } else {
                         System.out.print(mas[i] + ",");
-                        mas[i] = n2;
-                        mas[n3] = n1;
+                        mas[i] = num2;
+                        mas[n3] = num1;
                         i++;
                         n3++;
+qty++;
                     }
                 }
             }
-        }
 
     }
 }
