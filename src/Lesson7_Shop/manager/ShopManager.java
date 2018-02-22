@@ -3,6 +3,7 @@ package Lesson7_Shop.manager;
 import Lesson7_Shop.bag.Bag;
 
 public class ShopManager {
+
     public int sum(Bag bag) throws InterruptedException {
         int sum = 0;
         bag.initIterator();
