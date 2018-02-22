@@ -1,8 +1,8 @@
 package hw7.Person.Teacher;
 
-import hw7.Person.abstr.AbstractPerson;
+import hw7.Person.abstr.Person;
 
-public abstract class Teacher extends AbstractPerson {
+public  class Teacher extends Person  {
 
     public String subject;
     public double salary;
@@ -16,7 +16,7 @@ public abstract class Teacher extends AbstractPerson {
         this.subject = subject;
         this.salary  = salary;
     }
-    @Override
+
     public String getSubject() {
         return subject;
     }
@@ -25,7 +25,7 @@ public abstract class Teacher extends AbstractPerson {
         this.subject = subject;
     }
 
-    @Override
+
     public double getSalary() {
         return salary;
     }

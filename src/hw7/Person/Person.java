@@ -1,25 +1,25 @@
 package hw7.Person;
 
 public interface Person {
-    String getName();
-    int getAge();
-    String getGender();
-    String getSubject();
-    double getSalary();
-    String getMajor();
-    int getYear();
-    String getIdNumber();
-    char getGpa();
+//    String getName();
+//    int getAge();
+//    String getGender();
+//    String getSubject();
+//    double getSalary();
+//    String getMajor();
+//    int getYear();
+//    String getIdNumber();
+//    char getGpa();
 }
 
 
 /*
-An exercise has a superclass - AbstractPerson and a couple subclasses: Student and Teacher. CollegeStudent is a
-subclass of Student. A Teacher will be like AbstractPerson but will have additional properties such as salary (the
+An exercise has a superclass - Person and a couple subclasses: Student and Teacher. CollegeStudent is a
+subclass of Student. A Teacher will be like Person but will have additional properties such as salary (the
 amount the teacher earns) and subject (e.g. "Computer Science", "Chemistry", "English", "Other"). The
 CollegeStudent class will extend the Student class by adding a year (current level in college) and major
 (e.g. "Electrical Engineering", "Communications", and “Undeclared"). The Student class is derived from
-the AbstractPerson class and used as a starting point for the CollegeStudent class. Gender can be "M" for male
+the Person class and used as a starting point for the CollegeStudent class. Gender can be "M" for male
 and "F" for female. Acronym GPA stands for Grade Point Average.
 
 Assignment:

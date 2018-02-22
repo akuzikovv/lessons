@@ -2,15 +2,14 @@ package hw7.Person.Student;
 
 import hw7.Person.abstr.Student;
 
-public abstract class CollegeStudent extends Student {
+public  class CollegeStudent extends Student {
     public String major;
     public int year;
-    public String idNumber;
-    public char gpa;
 
-    public CollegeStudent(String name, int age, String gender, String idNumber, char gpa, int year, String major) {
 
-        super(name, age, gender);
+    public CollegeStudent(String name, int age, String gender, String idNumber, int gpa, int year, String major) {
+
+        super(name, age, gender,idNumber,gpa);
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -20,7 +19,7 @@ public abstract class CollegeStudent extends Student {
         this.major = major;
     }
 
-    @Override
+
     public String getMajor() {
         return major;
     }
@@ -29,7 +28,7 @@ public abstract class CollegeStudent extends Student {
         this.major = major;
     }
 
-    @Override
+
     public int getYear() {
         return year;
     }
@@ -38,7 +37,7 @@ public abstract class CollegeStudent extends Student {
         this.year = year;
     }
 
-    @Override
+
     public String getIdNumber() {
         return idNumber;
     }
@@ -47,12 +46,12 @@ public abstract class CollegeStudent extends Student {
         this.idNumber = idNumber;
     }
 
-    @Override
-    public char getGpa() {
+
+    public int getGpa() {
         return gpa;
     }
 
-    public void setGpa(char gpa) {
+    public void setGpa(int gpa) {
         this.gpa = gpa;
     }
 

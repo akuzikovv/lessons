@@ -1,17 +1,26 @@
 package hw7.Person.abstr;
 
-import hw7.Person.abstr.AbstractPerson;
+public  class Student extends Person {
+    public String idNumber;
+    public int gpa;
 
-public abstract class Student extends AbstractPerson {
-
-    public Student(String name,int age, String gender) {
+    public Student(String name,int age, String gender,String idNumber, int gpa) {
         super(name,age,gender);
         this.name = name;
         this.age = age;
         this.gender = gender;
+        this.idNumber = idNumber;
+        this.gpa = gpa;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Student{" +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                "idNumber='" + idNumber + '\'' +
+                ", gpa=" + gpa +
+                '}';
+    }
 }

@@ -1,18 +1,17 @@
 package hw7.Person.abstr;
 
-public abstract class AbstractPerson implements hw7.Person.Person {
+public  class Person  {
 
     public String name;
     public int age;
     public String gender;
 
-    public AbstractPerson(String name, int age, String gender){
+    public Person(String name, int age, String gender){
         this.name = name;
         this.age = age;
         this.gender = gender;
     }
 
-    @Override
     public int getAge() {
         return age;
     }
@@ -21,7 +20,7 @@ public abstract class AbstractPerson implements hw7.Person.Person {
         this.age = age;
     }
 
-    @Override
+
     public String getName() {
         return name;
     }
@@ -29,12 +28,21 @@ public abstract class AbstractPerson implements hw7.Person.Person {
     public void setName(String name) {
         this.name = name;
     }
-    @Override
+
     public String getGender() {
         return gender;
     }
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                '}';
     }
 }
