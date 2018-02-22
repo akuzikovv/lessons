@@ -4,6 +4,7 @@ package Lesson7_Shop.bag;
 import Lesson7_Shop.position.Position;
 
 public class BagImpl implements Bag {
+
     private static final int SIZE = 10;
 
     private Position[] positions = new Position[SIZE];

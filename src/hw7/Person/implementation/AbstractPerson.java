@@ -3,11 +3,22 @@ package hw7.Person.implementation;
 public abstract class AbstractPerson implements hw7.Person.Person {
 
     public String name;
+    public int age;
     public String gender;
 
-    public AbstractPerson(String name,String gender){
+    public AbstractPerson(String name, int age, String gender){
         this.name = name;
+        this.age = age;
         this.gender = gender;
+    }
+
+    @Override
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
