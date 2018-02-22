@@ -1,8 +1,8 @@
-package hw7.Person;
+package hw7.Person.Teacher;
 
-import hw7.Person.implementation.AbstractPerson;
+import hw7.Person.abstr.AbstractPerson;
 
-public class Teacher extends AbstractPerson {
+public abstract class Teacher extends AbstractPerson {
 
     public String subject;
     public double salary;

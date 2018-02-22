@@ -1,4 +1,4 @@
-package hw7.Person.implementation;
+package hw7.Person.abstr;
 
 public abstract class AbstractPerson implements hw7.Person.Person {
 

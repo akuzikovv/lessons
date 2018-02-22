@@ -1,8 +1,8 @@
-package hw7.Person;
+package hw7.Person.Student;
 
-import hw7.Person.Student;
+import hw7.Person.abstr.Student;
 
-public class CollegeStudent extends Student {
+public abstract class CollegeStudent extends Student {
     public String major;
     public int year;
     public String idNumber;
