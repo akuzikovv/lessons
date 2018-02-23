@@ -55,14 +55,9 @@ public  class CollegeStudent extends Student {
 
     @Override
     public String toString() {
-        return "CollegeStudent{" +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                ", idNumber='" + idNumber + '\'' +
-                ", gpa=" + gpa +
-                ", year=" + year +
-                "major='" + major + '\'' +
-                '}';
+        return "CollegeStudent " + "name: " + name  + ", age: " + age + ", gender: " + gender + ", idNumber: " + idNumber +
+                ", gpa: " + gpa +
+                ", year:" + year +
+                "major:" + major ;
     }
 }

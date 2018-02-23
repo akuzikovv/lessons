@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
     public static String text;
-    public static int personsIndex,studentsIndex,collegeStudentsIndex,teachersIndex=0;
+    public static int personsIndex,studentsIndex,collegeStudentsIndex,teachersIndex = 0;
     public static String Person[]= new String[100];
     public static String persons[] = new String[100];
     public static String students[] = new String[100];
@@ -53,18 +53,18 @@ public class Main {
                 System.out.println("Введите персону");
                 Main.addperson();
                 break;
-//            case 2:
-//                System.out.println("Введите Студента");
-//                Main.addStudent();
-//                break;
-//            case 3:
-//                System.out.println("Введите Учителя");
-//                Main.addTeacher();
-//                break;
-//            case 4:
-//                System.out.println("Введите Студента Коледжа");
-//                Main.addCollegeStudent();
-//                break;
+            case 2:
+                System.out.println("Введите Студента");
+                Main.addStudent();
+                break;
+            case 3:
+                System.out.println("Введите Учителя");
+                Main.addTeacher();
+                break;
+            case 4:
+                System.out.println("Введите Студента Коледжа");
+                Main.addCollegeStudent();
+                break;
             default:
                 System.out.println("QWERTY");
         }
