@@ -53,42 +53,42 @@ public class Main {
             case 1:
                 System.out.println("Введите персону как в примере:");
                 System.out.println("name");
-                System.out.println("age");
+                System.out.println("age (только цифры)");
                 System.out.println("gender");
                 Main.addperson();
                 break;
             case 2:
                 System.out.println("Введите Студента как в примере:");
                 System.out.println("name");
-                System.out.println("age");
+                System.out.println("age (только цифры)");
                 System.out.println("gender");
                 System.out.println("idNumber");
-                System.out.println("gpa");
+                System.out.println("gpa (только цифры)");
                 Main.addStudent();
                 break;
             case 3:
                 System.out.println("Введите Учителя как в примере:");
                 System.out.println("name");
-                System.out.println("age");
+                System.out.println("age (только цифры)");
                 System.out.println("gender");
                 System.out.println("subject");
-                System.out.println("salary");
+                System.out.println("salary (только цифры)");
                 Main.addTeacher();
                 break;
             case 4:
                 System.out.println("Введите Студента Коледжа как в примере:");
                 System.out.println("name");
-                System.out.println("age");
+                System.out.println("age (только цифры)");
                 System.out.println("gender");
                 System.out.println("idNumber");
-                System.out.println("gpa");
-                System.out.println("year");
+                System.out.println("gpa (только цифры)");
+                System.out.println("year (только цифры)");
                 System.out.println("major");
                 Main.addCollegeStudent();
                 break;
             default:
                 System.out.println("Выберите один из вариантов:");
-                menu();
+                addpersons();
         }
     }
 
@@ -116,7 +116,7 @@ public class Main {
                 break;
             default:
                 System.out.println("Выберите один из вариантов:");
-                menu();
+                displayPersons();
         }
     }
 
