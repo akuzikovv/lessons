@@ -31,6 +31,6 @@ public  class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student " + "name: " + name + ", age: " + age +", gender: " + gender +   "idNumber: " + idNumber + ", gpa: " + gpa ;
+        return "Student " + "name: " + name + ", age: " + age +", gender: " + gender +   ", idNumber: " + idNumber + ", gpa: " + gpa ;
     }
 }

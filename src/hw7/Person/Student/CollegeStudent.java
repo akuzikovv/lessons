@@ -57,7 +57,7 @@ public  class CollegeStudent extends Student {
     public String toString() {
         return "CollegeStudent " + "name: " + name  + ", age: " + age + ", gender: " + gender + ", idNumber: " + idNumber +
                 ", gpa: " + gpa +
-                ", year:" + year +
-                "major:" + major ;
+                ", year: " + year +
+                ", major: " + major ;
     }
 }
