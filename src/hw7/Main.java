@@ -7,13 +7,20 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
-    public static int mas[];
+    public static String text;
+    public static String Person[];
     public static Person person;
     public static Student student;
     public static CollegeStudent collegeStudent;
     public static Teacher teacher;
 
     public static void main(String[] args) {
+        menu();
+    }
+
+    public static void menu(){
+        System.out.println("1: Добавить персонажей");
+        System.out.println("2: Отобразить персонажей");
         switch (scanner.nextInt()) {
             case 1:
                 System.out.println("Добавьте персонажей");
@@ -27,7 +34,6 @@ public class Main {
                 System.out.println("QWERTY");
         }
     }
-
     public static void addpersons() {
         System.out.println("1: Добавить персону");
         System.out.println("2: Добавить Студента");
@@ -83,31 +89,39 @@ public class Main {
     }
 
     public static void addperson() {
-        String name = scanner.nextLine();
-        person = new Person(name, 25, "m");
-        System.out.println("ОТобразите персону");
-        System.out.println(person.toString());
+        for (int i = 0 ;i<=2;i++){
+            text = scanner.next();
+            Person[i]=text.toString();
+        }
+        person = new Person(Person[0],Person[1],Person[2]);
+        menu();
     }
 
     public static void addStudent() {
-        String name = scanner.nextLine();
-        person = new Person(name, 25, "m");
-        System.out.println("ОТобразите персону");
-        System.out.println(person.toString());
+        for (int i = 0 ;i<=4;i++){
+            text = scanner.next();
+            Person[i]=text.toString();
+        }
+        student = new Student(Person[0],Person[1],Person[2],Person[3],Person[4]);
+        menu();
     }
 
     public static void addTeacher() {
-        String name = scanner.nextLine();
-        person = new Person(name, 25, "m");
-        System.out.println("ОТобразите персону");
-        System.out.println(person.toString());
+        for (int i = 0 ;i<=4;i++){
+            text = scanner.next();
+            Person[i]=text.toString();
+        }
+        teacher = new Teacher(Person[0],Person[1],Person[2],Person[3],Person[4]);
+        menu();
     }
 
     public static void addCollegeStudent() {
-        String name = scanner.nextLine();
-        person = new Person(name, 25, "m");
-        System.out.println("ОТобразите персону");
-        System.out.println(person.toString());
+        for (int i = 0 ;i<=6;i++){
+            text = scanner.next();
+            Person[i]=text.toString();
+        }
+        collegeStudent = new CollegeStudent(Person[0],Person[1],Person[2],Person[3],Person[4],Person[5],Person[6]);
+        menu();
     }
 
     public static void displayPerson() {

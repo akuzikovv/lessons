@@ -4,10 +4,10 @@ import hw7.Person.abstr.Student;
 
 public  class CollegeStudent extends Student {
     public String major;
-    public int year;
+    public String year;
 
 
-    public CollegeStudent(String name, int age, String gender, String idNumber, int gpa, int year, String major) {
+    public CollegeStudent(String name, String age, String gender, String idNumber, String gpa, String year, String major) {
 
         super(name, age, gender,idNumber,gpa);
         this.name = name;
@@ -28,15 +28,13 @@ public  class CollegeStudent extends Student {
         this.major = major;
     }
 
-
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
-
 
     public String getIdNumber() {
         return idNumber;
@@ -47,11 +45,11 @@ public  class CollegeStudent extends Student {
     }
 
 
-    public int getGpa() {
+    public String getGpa() {
         return gpa;
     }
 
-    public void setGpa(int gpa) {
+    public void setGpa(String gpa) {
         this.gpa = gpa;
     }
 
