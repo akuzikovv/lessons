@@ -122,7 +122,9 @@ public class Main {
             text = scanner.next();
             Person[i]=text.toString();
         }
-        person = new Person(Person[0],Person[1],Person[2]);
+
+        int age = Integer.parseInt(Person[1].toString());
+        person = new Person(Person[0],age,Person[2]);
         persons[personsIndex]= person.toString();
         personsIndex++;
         menu();
@@ -133,7 +135,9 @@ public class Main {
             text = scanner.next();
             Person[i]=text.toString();
         }
-        student = new Student(Person[0],Person[1],Person[2],Person[3],Person[4]);
+        int age = Integer.parseInt(Person[1].toString());
+        double gpa = Integer.parseInt(Person[4].toString());
+        student = new Student(Person[0],age,Person[2],Person[3],gpa);
         students[studentsIndex]= student.toString();
         studentsIndex++;
         menu();
@@ -144,7 +148,9 @@ public class Main {
             text = scanner.next();
             Person[i]=text.toString();
         }
-        teacher = new Teacher(Person[0],Person[1],Person[2],Person[3],Person[4]);
+        int age = Integer.parseInt(Person[1].toString());
+        double salary = Integer.parseInt(Person[4].toString());
+        teacher = new Teacher(Person[0],age,Person[2],Person[3],salary);
         teachers[teachersIndex]= teacher.toString();
         teachersIndex++;
         menu();
@@ -155,7 +161,10 @@ public class Main {
             text = scanner.next();
             Person[i]=text.toString();
         }
-        collegeStudent = new CollegeStudent(Person[0],Person[1],Person[2],Person[3],Person[4],Person[5],Person[6]);
+        int age = Integer.parseInt(Person[1].toString());
+        double gpa = Integer.parseInt(Person[4].toString());
+        int year = Integer.parseInt(Person[5].toString());
+        collegeStudent = new CollegeStudent(Person[0],age,Person[2],Person[3],gpa,year,Person[6]);
         collegeStudents[collegeStudentsIndex]= teacher.toString();
         collegeStudentsIndex++;
         menu();

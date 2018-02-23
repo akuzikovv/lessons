@@ -5,9 +5,9 @@ import hw7.Person.abstr.Person;
 public  class Teacher extends Person  {
 
     public String subject;
-    public String salary;
+    public double salary;
 
-    public Teacher(String name, String age, String gender, String subject , String salary) {
+    public Teacher(String name, int age, String gender, String subject , double salary) {
 
         super(name,age,gender);
         this.name = name;
@@ -25,11 +25,11 @@ public  class Teacher extends Person  {
         this.subject = subject;
     }
 
-    public String getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

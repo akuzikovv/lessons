@@ -2,9 +2,9 @@ package hw7.Person.abstr;
 
 public  class Student extends Person {
     public String idNumber;
-    public String gpa;
+    public double gpa;
 
-    public Student(String name,String age, String gender,String idNumber, String gpa) {
+    public Student(String name,int age, String gender,String idNumber, double gpa) {
         super(name,age,gender);
         this.name = name;
         this.age = age;
@@ -21,11 +21,11 @@ public  class Student extends Person {
         this.idNumber = idNumber;
     }
 
-    public String getGpa() {
+    public double getGpa() {
         return gpa;
     }
 
-    public void setGpa(String gpa) {
+    public void setGpa(double gpa) {
         this.gpa = gpa;
     }
 

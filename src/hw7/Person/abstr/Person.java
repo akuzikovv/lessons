@@ -3,20 +3,20 @@ package hw7.Person.abstr;
 public  class Person  {
 
     public String name;
-    public String age;
+    public int age;
     public String gender;
 
-    public Person(String name, String age, String gender){
+    public Person(String name, int age, String gender){
         this.name = name;
         this.age = age;
         this.gender = gender;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
