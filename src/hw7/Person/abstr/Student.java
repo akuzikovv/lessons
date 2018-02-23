@@ -13,14 +13,24 @@ public  class Student extends Person {
         this.gpa = gpa;
     }
 
+    public String getIdNumber() {
+        return idNumber;
+    }
+
+    public void setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
+    }
+
+    public String getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(String gpa) {
+        this.gpa = gpa;
+    }
+
     @Override
     public String toString() {
-        return "Student{" +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                "idNumber='" + idNumber + '\'' +
-                ", gpa=" + gpa +
-                '}';
+        return "Student " + "name: " + name + ", age: " + age +", gender: " + gender +   "idNumber: " + idNumber + ", gpa: " + gpa ;
     }
 }
