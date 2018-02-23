@@ -40,7 +40,8 @@ public class Main {
                 System.out.println("До встречи!");
                 return;
             default:
-                System.out.println("QWERTY");
+                System.out.println("Выберите один из вариантов:");
+                menu();
         }
     }
     public static void addpersons() {
@@ -86,7 +87,8 @@ public class Main {
                 Main.addCollegeStudent();
                 break;
             default:
-                System.out.println("QWERTY");
+                System.out.println("Выберите один из вариантов:");
+                menu();
         }
     }
 
@@ -113,7 +115,8 @@ public class Main {
                 Main.displayCollegeStudent();
                 break;
             default:
-                System.out.println("QWERTY");
+                System.out.println("Выберите один из вариантов:");
+                menu();
         }
     }
 
