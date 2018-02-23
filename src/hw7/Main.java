@@ -145,6 +145,7 @@ public class Main {
         for (int i =0; i<personsIndex;i++){
         System.out.println(persons[i]);
         }
+        System.out.println();
         menu();
     }
 
@@ -152,6 +153,7 @@ public class Main {
         for (int i =0; i<studentsIndex;i++){
             System.out.println(students[i]);
         }
+        System.out.println();
         menu();
     }
 
@@ -159,6 +161,7 @@ public class Main {
         for (int i =0; i<teachersIndex;i++){
             System.out.println(teachers[i]);
         }
+        System.out.println();
         menu();
     }
 
@@ -166,6 +169,7 @@ public class Main {
         for (int i =0; i<collegeStudentsIndex;i++){
             System.out.println(collegeStudents[i]);
         }
+        System.out.println();
         menu();
     }
 }

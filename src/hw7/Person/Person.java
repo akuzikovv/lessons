@@ -1,15 +1,15 @@
 package hw7.Person;
 
 public interface Person {
-//    String getName();
-//    int getAge();
-//    String getGender();
-//    String getSubject();
-//    double getSalary();
-//    String getMajor();
-//    int getYear();
-//    String getIdNumber();
-//    char getGpa();
+    String getName();
+    int getAge();
+    String getGender();
+    String getSubject();
+    double getSalary();
+    String getMajor();
+    int getYear();
+    String getIdNumber();
+    char getGpa();
 }
 
 
