@@ -50,19 +50,39 @@ public class Main {
         System.out.println("4: Добавить Студента Коледжа");
         switch (scanner.nextInt()) {
             case 1:
-                System.out.println("Введите персону");
+                System.out.println("Введите персону как в примере:");
+                System.out.println("name");
+                System.out.println("age");
+                System.out.println("gender");
                 Main.addperson();
                 break;
             case 2:
-                System.out.println("Введите Студента");
+                System.out.println("Введите Студента как в примере:");
+                System.out.println("name");
+                System.out.println("age");
+                System.out.println("gender");
+                System.out.println("idNumber");
+                System.out.println("gpa");
                 Main.addStudent();
                 break;
             case 3:
-                System.out.println("Введите Учителя");
+                System.out.println("Введите Учителя как в примере:");
+                System.out.println("name");
+                System.out.println("age");
+                System.out.println("gender");
+                System.out.println("subject");
+                System.out.println("salary");
                 Main.addTeacher();
                 break;
             case 4:
-                System.out.println("Введите Студента Коледжа");
+                System.out.println("Введите Студента Коледжа как в примере:");
+                System.out.println("name");
+                System.out.println("age");
+                System.out.println("gender");
+                System.out.println("idNumber");
+                System.out.println("gpa");
+                System.out.println("year");
+                System.out.println("major");
                 Main.addCollegeStudent();
                 break;
             default:
