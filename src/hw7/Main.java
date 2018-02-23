@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
     public static String text;
-    public static String Person[];
+    public static String Person[]= new String[100];
     public static Person person;
     public static Student student;
     public static CollegeStudent collegeStudent;
@@ -21,6 +21,7 @@ public class Main {
     public static void menu(){
         System.out.println("1: Добавить персонажей");
         System.out.println("2: Отобразить персонажей");
+        System.out.println("3: Выход.");
         switch (scanner.nextInt()) {
             case 1:
                 System.out.println("Добавьте персонажей");
@@ -30,6 +31,9 @@ public class Main {
                 System.out.println("Отобразите персонажей");
                 displayPersons();
                 break;
+            case 3:
+                System.out.println("До встречи!");
+                return;
             default:
                 System.out.println("QWERTY");
         }
@@ -126,18 +130,21 @@ public class Main {
 
     public static void displayPerson() {
         System.out.println(person.toString());
+        menu();
     }
 
     public static void displayStudent() {
         System.out.println(student.toString());
+        menu();
     }
 
     public static void displayTeacher() {
         System.out.println(teacher.toString());
+        menu();
     }
 
     public static void displayCollegeStudent() {
         System.out.println(collegeStudent.toString());
+        menu();
     }
 }
-///
