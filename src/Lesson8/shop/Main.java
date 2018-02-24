@@ -1,11 +1,11 @@
 package Lesson8.shop;
 
-import com.shop.bag.ATBPacket;
-import com.shop.bag.Bag;
-import com.shop.bag.BagImpl;
-import com.shop.manager.ShopManager;
-import com.shop.position.impl.Apple;
-import com.shop.position.impl.Pen;
+import Lesson8.shop.bag.ATBPacket;
+import Lesson8.shop.bag.Bag;
+import Lesson8.shop.bag.BagImpl;
+import Lesson8.shop.manager.ShopManager;
+import Lesson8.shop.position.impl.Apple;
+import Lesson8.shop.position.impl.Pen;
 
 import java.util.Scanner;
 
@@ -66,6 +66,8 @@ public class Main {
     }
 
     private static void goNaCassu(Bag bag){
+
+
         ShopManager babaGala = new ShopManager();
         try {
             babaGala.sum(bag);

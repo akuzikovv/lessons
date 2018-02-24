@@ -18,6 +18,7 @@ public class ShelfImplApple  implements Shelf {
     @Override
     public boolean putApple(AbstractPosition position) {
         sizeAppleShelf++;
+        //проверка чтоб не больше размера массива
         arrayApple[sizeAppleShelf]= (Apple) position;
         return true;
     }
@@ -25,6 +26,7 @@ public class ShelfImplApple  implements Shelf {
     @Override
     public AbstractPosition getApple(int index) {
         sizeAppleShelf--;
+        //проверка чтоб не меньше размера массива
         return arrayApple[sizeAppleShelf];
     }
 

@@ -11,10 +11,9 @@ public abstract class AbstractPosition implements Position {
     public String name;
     public int count;
 
-    public AbstractPosition(double price, String name, int count) {
+    public AbstractPosition(double price, String name) {
         this.price = price;
         this.name = name;
-        this.count = count;
     }
 
     @Override

@@ -10,8 +10,8 @@ import Lesson8.shop.shelf.ShelfImplApple;
  */
 public class Apple extends AbstractPosition {
 
-    public Apple(double price, String name,int count)    {
-        super(price, name,count);
+    public Apple(double price, String name)    {
+        super(price, name);
     }
 
 
