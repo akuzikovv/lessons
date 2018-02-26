@@ -34,7 +34,7 @@ public abstract class ShelfImplApple  implements Shelf {
         }
         else
             sizeAppleShelf--;
-        //проверка чтоб не меньше размера массива
+        //проверка чтоб не меньше 0
         return arrayApple[sizeAppleShelf];
     }
 
