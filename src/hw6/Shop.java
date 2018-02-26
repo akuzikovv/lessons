@@ -1,7 +1,7 @@
 package hw6;
 
 public class Shop {
-    public static int price,count;
+    public static int price, count;
     public static String name;
     public static String description = "Description of product";
 
@@ -41,6 +41,6 @@ public class Shop {
 
     @Override
     public String toString() {
-        return "Product: "+ name+ ", " + count+ ", " + price;
+        return "Product: " + name + ", " + count + ", " + price;
     }
 }

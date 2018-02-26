@@ -4,21 +4,19 @@ public class GigaMarket extends Shop {
     public static int discount;
     public static String rebate;
 
-    public GigaMarket(int price, String name, int count,int discount , String rebate) {
+    public GigaMarket(int price, String name, int count, int discount, String rebate) {
         super(price, name, count);
         this.discount = discount;
         this.rebate = rebate;
     }
 
-
-
-        public String getFree( String rebate){
+    public String getFree(String rebate) {
         return rebate;
-        }
+    }
 
-        public int getFree( int discount){
-            return discount;
-        }
+    public int getFree(int discount) {
+        return discount;
+    }
 
     public static int getDiscount() {
         return discount;
@@ -38,8 +36,8 @@ public class GigaMarket extends Shop {
 
     @Override
     public String toString() {
-        return "GigaMarket products: "+ name+ ", " + count + ", " + price + ", " + description + ", "+ discount+ ", "+ rebate;
+        return "GigaMarket products: " + name + ", " + count + ", " + price + ", " + description + ", " + discount + ", " + rebate;
 
-        }
+    }
 }
 

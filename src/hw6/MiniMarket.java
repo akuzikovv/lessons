@@ -8,6 +8,6 @@ public class MiniMarket extends Shop {
 
     @Override
     public String toString() {
-        return "MiniMarket products: "+ name+ ", " + count + ", " + price;
+        return "MiniMarket products: " + name + ", " + count + ", " + price;
     }
 }
