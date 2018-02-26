@@ -16,19 +16,27 @@ public class ShelfImplPen implements Shelf {
 
     @Override
     public boolean putApple(AbstractPosition position) {
+        if (sizePenShelf>arrayPen.length){
+            arrayPen[sizePenShelf]= null;
+        }
+        else
         sizePenShelf++;
         arrayPen[sizePenShelf]= (Pen) position;
         return true;
     }
 
     @Override
-    public AbstractPosition getApple(int index) {
+    public AbstractPosition getPen(int index) {
+        if (sizePenShelf<=0){
+            arrayPen[sizePenShelf]= null;
+        }
+        else
         sizePenShelf--;
         return arrayPen[sizePenShelf];
     }
 
     @Override
-    public boolean checkAvailable(int index) {
+    public boolean checkPenAvailable(int index) {
         if (sizePenShelf>0)return true;
         else return false;
     }

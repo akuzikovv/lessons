@@ -9,7 +9,7 @@ import Lesson8.shop.shelf.Shelf;
 public class Pen extends AbstractPosition {
     public Pen(double price, String name) {
 
-        super(price, name,count);
+        super(price, name);
     }
 
 
