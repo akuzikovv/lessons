@@ -4,7 +4,7 @@ import Lesson8.shop.position.Position;
 import Lesson8.shop.position.impl.Apple;
 import Lesson8.shop.position.impl.abst.AbstractPosition;
 
-public class ShelfImplApple  implements Shelf {
+public abstract class ShelfImplApple  implements Shelf {
 
     private int sizeAppleShelf;
     private Apple arrayApple[];

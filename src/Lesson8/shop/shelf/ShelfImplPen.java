@@ -3,7 +3,7 @@ package Lesson8.shop.shelf;
 import Lesson8.shop.position.impl.Pen;
 import Lesson8.shop.position.impl.abst.AbstractPosition;
 
-public class ShelfImplPen implements Shelf {
+public abstract class ShelfImplPen implements Shelf {
 
     private int sizePenShelf;
     private Pen arrayPen[];

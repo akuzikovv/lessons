@@ -6,18 +6,8 @@ public class MiniMarket extends Shop {
         super(price, name, count);
     }
 
-    public  void main(String[] args) {
-        getName(name);
-        getPrice(price);
-        getCount(count);
+    @Override
+    public String toString() {
+        return "MiniMarket products: "+ name+ ", " + count + ", " + price;
     }
-
-
-
-    public static String getName(String name) {
-        System.out.println(name);
-        return name;
-    }
-
-
 }

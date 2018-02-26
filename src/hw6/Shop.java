@@ -1,43 +1,46 @@
 package hw6;
 
 public class Shop {
-    public static int price;
+    public static int price,count;
     public static String name;
-    public static int count;
+    public static String description = "Description of product";
 
     public Shop(int price, String name, int count) {
-        this.count = count;
-        this.name = name;
-        this.price = price;
+        Shop.count = count;
+        Shop.name = name;
+        Shop.price = price;
     }
 
-    public static int getPrice(int price) {
+    public static int getPrice() {
         return Shop.price;
     }
 
-    public static void setPrice(int price) {
+    public static void setPrice() {
         Shop.price = price;
     }
 
     public static String getName() {
-        return name;
+        return Shop.name;
     }
 
-    public static void setName(String name) {
+    public static void setName() {
         Shop.name = name;
     }
 
-    public static int getCount(int count) {
+    public static int getCount() {
         return Shop.count;
     }
 
-    public static void setCount(int count) {
+    public static void setCount() {
         Shop.count = count;
     }
 
-    public  void productDescription() {
-        return;
+    public String productDescription(String description) {
+        return description;
     }
 
-
+    @Override
+    public String toString() {
+        return "Product: "+ name+ ", " + count+ ", " + price;
+    }
 }
