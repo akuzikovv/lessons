@@ -22,5 +22,20 @@ public class GigaMarket extends Shop {
             return discount;
         }
 
+    public static int getDiscount() {
+        return discount;
     }
+
+    public static void setDiscount(int discount) {
+        GigaMarket.discount = discount;
+    }
+
+    public static String getRebate() {
+        return rebate;
+    }
+
+    public static void setRebate(String rebate) {
+        GigaMarket.rebate = rebate;
+    }
+}
 
