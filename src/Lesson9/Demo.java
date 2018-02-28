@@ -6,16 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Demo {
-//throws IOException
+    //throws IOException
     public static String read(String path) {
 
-//        BufferedReader reader = null;
         StringBuilder stringBuilder = new StringBuilder();
 
-
-            stringBuilder = new StringBuilder();
-           try ( BufferedReader reader = new BufferedReader(new FileReader(path))){
-
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
 
             String currentString;
 
@@ -23,14 +19,12 @@ public class Demo {
                 stringBuilder.append(currentString);
                 stringBuilder.append("\n");
             }
-            return stringBuilder.toString();
         }
 
-//                reader.close();
+        catch (Exception e){e.printStackTrace();}
 
-
-            return stringBuilder.toString();
-        }
+        return stringBuilder.toString();
+    }
 
     public static void main(String[] args) throws IOException {
         System.out.println(read("/home/treward/Documents/text"));
