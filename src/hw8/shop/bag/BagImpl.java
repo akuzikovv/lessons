@@ -21,18 +21,22 @@ public class BagImpl implements Bag {
 
     public void add(Position position) {
         positions[realIndex++] = position;
+        System.out.println(position.getPrice());
+        System.out.println(position.getName());
         if (realIndex>1 && realIndex%2!=0) {
             positions[realIndex] = new Position() {
                 @Override
                 public String getName() {
                     return position.getName();
                 }
-
                 @Override
                 public double getPrice() {
                     return 0;
                 }
             };
+
+            System.out.println(position.getPrice());
+            System.out.println(position.getName());
         }
         }
 

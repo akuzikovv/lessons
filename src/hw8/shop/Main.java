@@ -68,7 +68,7 @@ public class Main {
             System.out.println("1:Pen");
             System.out.println("2:Apple");
             System.out.println("3:dumay");
-            switch (scanner.nextInt()){
+           switch (scanner.nextInt()){
                 case 1:
                     if (shelfImplPen.checkAvailable()) {
                         bag.add(shelfImplPen.get());
