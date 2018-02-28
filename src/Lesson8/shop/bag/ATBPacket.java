@@ -1,6 +1,7 @@
 package Lesson8.shop.bag;
 
 import Lesson8.shop.position.Position;
+import Lesson8.shop.position.impl.abst.AbstractPosition;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -9,10 +10,9 @@ import java.util.Comparator;
  * Created by cube on 21.02.2018.
  */
 public class ATBPacket implements Bag {
+
     private static final int SIZE = 100000;
-
     private Position[] positions =  new Position[SIZE];
-
     private int realIndex =0;
 
     private int iteratorIndex = 0;
@@ -27,7 +27,7 @@ public class ATBPacket implements Bag {
     }
 
     public boolean haveNext(){
-        return iteratorIndex<realIndex;
+                return iteratorIndex<realIndex;
     }
 
     public Position next(){

@@ -4,7 +4,7 @@ import Lesson8.shop.position.Position;
 import Lesson8.shop.position.impl.Apple;
 import Lesson8.shop.position.impl.abst.AbstractPosition;
 
-public abstract class ShelfImplApple  implements Shelf {
+public class ShelfImplApple  implements Shelf {
 
     private int sizeAppleShelf;
     private Apple arrayApple[];
@@ -16,31 +16,29 @@ public abstract class ShelfImplApple  implements Shelf {
 
 
     @Override
-    public boolean putApple(AbstractPosition position) {
-        if (sizeAppleShelf>arrayApple.length){
-            arrayApple[sizeAppleShelf]= null;
-        }
-        else
-        sizeAppleShelf++;
-        //проверка чтоб не больше размера массива
-        arrayApple[sizeAppleShelf]= (Apple) position;
-        return true;
-    }
-
-    @Override
-    public AbstractPosition getApple(int index) {
+    public boolean put(AbstractPosition position) {
         if (sizeAppleShelf<=0){
             arrayApple[sizeAppleShelf]= null;
         }
-        else
-            sizeAppleShelf--;
-        //проверка чтоб не меньше 0
-        return arrayApple[sizeAppleShelf];
+        else {
+            arrayApple[--sizeAppleShelf] = (Apple) position;
+        }return true;
     }
 
     @Override
-    public boolean checkAppleAvailable(int index) {
-        if (sizeAppleShelf>0)return true;
+    public AbstractPosition get() {
+        if (sizeAppleShelf>=arrayApple.length){
+            arrayApple[sizeAppleShelf]= null;
+        }
+        else {
+            sizeAppleShelf++;
+        }return arrayApple[sizeAppleShelf];
+    }
+
+    @Override
+    public boolean checkAvailable(){
+        if (sizeAppleShelf<arrayApple.length) return true;
         else return false;
     }
 }
+

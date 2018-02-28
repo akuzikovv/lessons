@@ -1,6 +1,9 @@
 package Lesson8.shop.bag;
 
 import Lesson8.shop.position.Position;
+import Lesson8.shop.position.impl.abst.AbstractPosition;
+import javafx.geometry.Pos;
+import org.omg.PortableServer.POA;
 
 /**
  * Created by cube on 21.02.2018.

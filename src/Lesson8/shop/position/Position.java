@@ -8,5 +8,4 @@ public interface Position {
     public String getName();
 
     public double getPrice();
-    int getCount();
 }
