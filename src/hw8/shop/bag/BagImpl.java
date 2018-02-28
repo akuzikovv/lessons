@@ -34,7 +34,6 @@ public class BagImpl implements Bag {
                     return 0;
                 }
             };
-
             System.out.println(position.getPrice());
             System.out.println(position.getName());
         }
