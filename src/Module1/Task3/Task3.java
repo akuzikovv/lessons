@@ -3,9 +3,8 @@ package Module1.Task3;
 import Module1.Main;
 
 public class Task3 {
-    public static int i, j, a, index,n3;
+    public static int i, j, a, index,qty,indexdouble;
     public static int mas[] = new int[20];
-    public static int qty = 0;
 
     public static void main() {
         System.out.print("Массив случайных чисел от 1 до 20 : " + '\n');
@@ -33,20 +32,19 @@ public class Task3 {
         }
     }
 
-
     public static void countingIndex() {
-        index=20;
-        j=0;
-        while (j!=19){
-            for (i = j; i <mas.length-1; i++) {
-                    if (mas[j]==mas[i]){
-                        index--;
-            }}
-            j++;
+        qty = 0;
+        index = 0;
+        indexdouble = 0;
+        for ( i = 0; i < mas.length; i++) {
+            index++;
+            for ( j = i + 1; j < mas.length; j++) {
+                if (mas[j] == mas[i]) {
+                    indexdouble++;
+                }
+            }
         }
-        System.out.println('\n' + "Количество различных элементов массива " + index);
-        /// В этом методе дичь.
+        qty = index - indexdouble+1;
+        System.out.println('\n' + "Количество различных элементов массива " + qty);
     }
-
-
 }
