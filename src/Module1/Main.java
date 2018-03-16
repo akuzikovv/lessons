@@ -2,6 +2,7 @@ package Module1;
 
 import Module1.Task2.Task2;
 import Module1.Task3.Task3;
+import Module1.Task4.Task4;
 import hw4.*;
 
 import java.util.Scanner;
@@ -46,6 +47,7 @@ public class Main {
                 break;
             case 4:
                 System.out.println("Задача 4: ");
+                Task4.doProgram();
 
                 break;
             case 5:
