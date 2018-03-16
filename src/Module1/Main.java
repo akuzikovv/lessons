@@ -1,5 +1,6 @@
 package Module1;
 
+import Module1.Task1.Counting;
 import Module1.Task2.Task2;
 import Module1.Task3.Task3;
 import Module1.Task4.Task4;
@@ -36,6 +37,7 @@ public class Main {
             case 1:
                 System.out.println("Задача 1: ");
 
+
                 break;
             case 2:
                 System.out.println("Задача 2 :");
@@ -48,7 +50,6 @@ public class Main {
             case 4:
                 System.out.println("Задача 4: ");
                 Task4.doProgram();
-
                 break;
             case 5:
                 System.out.println("Задача 5: ");
