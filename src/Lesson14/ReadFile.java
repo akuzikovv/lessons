@@ -13,10 +13,10 @@ import java.io.IOException;
 public class ReadFile implements Iterable<String> {
 
     // Используется в TextFileIterator ниже
-    final String filename;
+    final String path;
 
-    public ReadFile(String filename) {
-        this.filename = filename;
+    public ReadFile(String path) {
+        this.path = path;
     }
 
     // Это единственный метод интерфейса Iterable
@@ -37,7 +37,7 @@ public class ReadFile implements Iterable<String> {
             // Открыть файл, прочитать и запомнить первую строку
             //   Выбрать строку наперед для использования функции hasNext()
             try {
-                in = new BufferedReader(new FileReader(filename));
+                in = new BufferedReader(new FileReader(path));
                 nextline = in.readLine();
             } catch (IOException e) {
                 throw new IllegalArgumentException(e);
@@ -74,10 +74,10 @@ public class ReadFile implements Iterable<String> {
     }
 
     public static void main(String[] args) {
-        String filename = "/home/treward/Documents/task4";
+        String path = "/home/treward/Documents/task4";
         if (args.length > 0)
-            filename = args[0];
-        for (String line : new ReadFile(filename))
+            path = args[0];
+        for (String line : new ReadFile(path))
             System.out.println(line);
     }
 }
