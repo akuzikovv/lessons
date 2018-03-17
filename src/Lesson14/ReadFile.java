@@ -10,12 +10,12 @@ import java.io.IOException;
  *   Метод итератора remove() генерирует UnsupportedOperatorException.
  *   Итератор перехватывает и генерирует IOExceptions как IllegalArgumentExceptions.
  */
-public class TextFile implements Iterable<String> {
+public class ReadFile implements Iterable<String> {
 
     // Используется в TextFileIterator ниже
     final String filename;
 
-    public TextFile(String filename) {
+    public ReadFile(String filename) {
         this.filename = filename;
     }
 
@@ -60,7 +60,6 @@ public class TextFile implements Iterable<String> {
                     if (nextline == null)
                         in.close();                // Закрыть по достижению EOF
                 }
-
                 // Возвратить строку, прочитанную раннее
                 return result;
 
@@ -68,7 +67,6 @@ public class TextFile implements Iterable<String> {
                 throw new IllegalArgumentException(e);
             }
         }
-
         // Файл только для чтения, мы не разрешаем удаление строк
         public void remove() {
             throw new UnsupportedOperationException();
@@ -76,11 +74,10 @@ public class TextFile implements Iterable<String> {
     }
 
     public static void main(String[] args) {
-        String filename = "TextFile.java";
+        String filename = "/home/treward/Documents/task4";
         if (args.length > 0)
             filename = args[0];
-
-        for (String line : new TextFile(filename))
+        for (String line : new ReadFile(filename))
             System.out.println(line);
     }
 }
