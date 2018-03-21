@@ -5,15 +5,15 @@ public class Tamagochi implements Runnable {
     private static final int MAX_VALUE = 100;
     private static final int NORMAL_VALUE = 50;
     private int errorsCounter = 0;
-    private int eatLevel=MAX_VALUE;
+    private int eatLevel = MAX_VALUE;
     private int playLevel = MAX_VALUE;
-    private int toiletLevel =MAX_VALUE;
-    private int sleepLevel =MAX_VALUE;
+    private int toiletLevel = MAX_VALUE;
+    private int sleepLevel = MAX_VALUE;
 
-    private int eatLevelStep=40;
+    private int eatLevelStep = 40;
     private int playLevelStep = 20;
-    private int toiletLevelStep =30;
-    private int sleepLevelStep =40;
+    private int toiletLevelStep = 30;
+    private int sleepLevelStep = 40;
 
 
     /**
@@ -29,17 +29,25 @@ public class Tamagochi implements Runnable {
      */
     @Override
     public void run() {
-        while (!rip()){
+//        int sleepCount = 10;
+        while (!rip()) {
             decreaseParameters();
             try {
                 decreaseParameters();
-//                checkParameters();
                 showProblems();
-                Thread.sleep(10000);
+                for (int i = 0; i<10; i++){
 
 
+//                if (!Thread.interrupted() && sleepCount > 1) {
+                    Thread.sleep(1000);
+                    if (errorsCounter>=5){
+                        break;
+                    }
+//                    sleepCount--;
+                }
             } catch (InterruptedException e) {
-                e.printStackTrace();
+//                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
         }
         System.out.println("R.I.P");
@@ -47,65 +55,61 @@ public class Tamagochi implements Runnable {
     }
 
     private void showProblems() {
-        if (playLevel<=NORMAL_VALUE){
+        if (playLevel <= NORMAL_VALUE) {
             System.out.println("I want to play with you");
         }
-        if (eatLevel<=NORMAL_VALUE){
+        if (eatLevel <= NORMAL_VALUE) {
             System.out.println("Please feed me");
         }
-        if (sleepLevel<=NORMAL_VALUE){
+        if (sleepLevel <= NORMAL_VALUE) {
             System.out.println("zZzzZzzZZZZZZZZzzz");
         }
-        if (toiletLevel<=NORMAL_VALUE){
+        if (toiletLevel <= NORMAL_VALUE) {
             System.out.println("Where is the toilet?");
         }
     }
 
-    public void play(){
-        if (playLevel<=NORMAL_VALUE) {
+    public void play() {
+        if (playLevel <= NORMAL_VALUE) {
             playLevel = MAX_VALUE;
-        }
-        else {
+        } else {
             errorsCounter++;
         }
     }
 
-   public void feed(){
-       if (eatLevel<=NORMAL_VALUE) {
-           eatLevel = MAX_VALUE;
-       }
-       else {
-           errorsCounter++;
-       }
+    public void feed() {
+        if (eatLevel <= NORMAL_VALUE) {
+            eatLevel = MAX_VALUE;
+        } else {
+            errorsCounter++;
+        }
     }
 
-   public void clear(){
-       if (toiletLevel<=NORMAL_VALUE) {
-           toiletLevel = MAX_VALUE;
-       }
-       else {
-           errorsCounter++;
-       }
-   }
+    public void clear() {
+        if (toiletLevel <= NORMAL_VALUE) {
+            toiletLevel = MAX_VALUE;
+        } else {
+            errorsCounter++;
+        }
+    }
 
-   public void getSleep(){
-       if (playLevel<=NORMAL_VALUE) {
-           sleepLevel = MAX_VALUE;
-       }
-       else {
-           errorsCounter++;
-       }
-   }
+    public void getSleep() {
+        if (playLevel <= NORMAL_VALUE) {
+            sleepLevel = MAX_VALUE;
+        } else {
+            errorsCounter++;
+        }
+    }
 
-   private boolean rip(){
-       return  (sleepLevel <=0 || toiletLevel<=0 || eatLevel<=0|| playLevel<=0 || errorsCounter>=5);
-   }
+    private boolean rip() {
+        return (sleepLevel <= 0 || toiletLevel <= 0 || eatLevel <= 0 || playLevel <= 0 || errorsCounter >= 5);
+    }
 
-   private void decreaseParameters(){
-       playLevel-=playLevelStep;
-       eatLevel-=eatLevelStep;
-       toiletLevel-=toiletLevelStep;
-       sleepLevel-=sleepLevelStep;
-   }
+    private void decreaseParameters() {
+        playLevel -= playLevelStep;
+        eatLevel -= eatLevelStep;
+        toiletLevel -= toiletLevelStep;
+        sleepLevel -= sleepLevelStep;
+    }
 
 }

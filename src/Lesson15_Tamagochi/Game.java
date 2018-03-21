@@ -19,11 +19,14 @@ public class Game {
 
         while (tamagochiThread.isAlive()) {
             int command = scanner.nextInt();
-            doSomething(tamagochi, command);
+            doSomething(tamagochi,tamagochiThread, command);
         }
+
+        System.exit(0);
     }
 
-    private static void doSomething(Tamagochi tamagochi, int command) {
+    private static void doSomething(Tamagochi tamagochi, Thread tamagochiThread, int command) {
+//        tamagochiThread.interrupt();
         switch (command){
             case 1: tamagochi.feed();
             break;
